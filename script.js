@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting) {
                 const progressBars = entry.target.querySelectorAll('.progress');
                 progressBars.forEach(bar => {
-                    const targetWidth = bar.style.width;
+                    const targetWidth = bar.getAttribute('data-progress') + '%';
                     bar.style.width = '0';
                     setTimeout(() => {
                         bar.style.width = targetWidth;
